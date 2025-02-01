@@ -30,3 +30,94 @@
 .upcoming{
   background-color: rgba(61, 182, 101, 0.473);
 }
+
+/* deepseek */
+/* Media Queries */
+@media (max-width: 768px) {
+  .container-fluid, .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  /* Navigation adjustments */
+  .col-2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .btnAside {
+    width: 100%;
+  }
+
+  /* Main content adjustments */
+  .row-cols-lg-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Task cards */
+  .priority, .upcoming, .overdue, .pending {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  /* Progress bars */
+  .progress-bar {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 0.5rem;
+  }
+
+  /* Recent visits section */
+  .newChat {
+    margin-top: 1rem;
+    height: auto !important;
+  }
+
+  .row-cols-md-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Workspace adjustments */
+  .space {
+    display: none;
+  }
+
+  .navbar-brand {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Header adjustments */
+  .col-8, .col {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Search input */
+  .col-8 input {
+    width: 100%;
+  }
+
+  /* Notification and profile icons */
+  .col-1 {
+    width: auto;
+  }
+
+  /* Main grid adjustments */
+  .row-cols-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Task status cards */
+  .row-cols-lg-5 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* New task list */
+  .text-end.ms-5 {
+    margin-left: 0 !important;
+    display: block;
+  }
+}
