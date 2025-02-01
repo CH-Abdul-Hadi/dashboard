@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav area -->
+    <div class="container-fluid px-4 ms-0 mt-0 text-center">
+      <div class="row gx-4">
+        <!-- dropdown -->
+        <div class="col-2">
+          <div class="pt-3">
+            <div class="dropdown">
+              <button
+                class="btn text-white-100 mw-100 btn-dark dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-square-check"></i>
+                Taskboard
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- main nav -->
+        <div class="col p-0 m-0">
+          <div class="pt-3">
+            <div class="container px-4 text-center">
+              <div class="row">
+                <!-- search -->
+                <div class="col-8">
+                  <!-- <i class="fa-solid fa-magnifying-glass search"></i> -->
+                  <div class="">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                  </div>
+                </div>
+
+                <!-- create new task -->
+                <div class="col">
+                  <div>
+                    <button type="button" class="btn btn-dark">
+                      <img
+                        src="./images/icons8-sparkle-50.png"
+                        alt=""
+                        width="16rem"
+                      />
+                      New task
+                    </button>
+                  </div>
+                </div>
+
+                <!-- notification -->
+                <div class="col-1">
+                  <div class="p-1">
+                    <button class="btnNotification">
+                      <i class="fa-regular fa-bell fs-3"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- profile -->
+                <div class="col-1">
+                  <div>
+                    <button
+                      type="button"
+                      class="btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      <i class="fa-solid fa-user fs-3"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main body -->
+    <div class="container-fluid px-4 ms-0 mt-2">
+      <div class="row gx-4">
+        <!-- right area-->
+        <div class="col-2">
+          <div class="pt-3">
+            <menu>Menu</menu>
+
+            <!-- Home -->
+            <button
+              type="button"
+              class="mt-2 btn btn-outline-dark btnNotification btnAside text-start"
+            >
+              <i class="fa-solid fa-house"></i>
+              Home
+            </button>
+
+            <!-- Board -->
+            <button
+              type="button"
+              class="mt-2 btn btn-outline-dark btnNotification btnAside text-start"
+            >
+              <i class="fa-solid fa-clipboard"></i>
+              Board
+            </button>
+
+            <!-- Chat -->
+            <button
+              type="button"
+              class="mt-2 btn btn-outline-dark btnNotification btnAside text-start"
+            >
+              <i class="fa-regular fa-comment text-dark"></i>
+              Chat
+            </button>
+
+            <!-- Calender -->
+            <button
+              type="button"
+              class="mt-2 btn btn-outline-dark btnNotification btnAside text-start"
+            >
+              <i class="fa-solid fa-calendar-days"></i>
+              Calender
+            </button>
+
+            <!-- Template -->
+            <button
+              type="button"
+              class="mt-2 btn btn-outline-dark btnNotification btnAside text-start"
+            >
+              <i class="fa-solid fa-layer-group"></i>
+              Template
+            </button>
+
+            <menu class="pt-3">Account</menu>
+            <!-- Account -->
+            <button
+              type="button"
+              class="mt-2 btn btn-outline-dark btnNotification btnAside text-start"
+            >
+              <i class="fa-solid fa-user"></i>
+              Account
+            </button>
+
+            <!-- Setting -->
+            <button
+              type="button"
+              class="mt-2 btn btn-outline-dark btnNotification btnAside text-start"
+            >
+              <i class="fa-solid fa-gear"></i>
+              Setting
+            </button>
+          </div>
+        </div>
+
+        <!-- main nav -->
+        <div class="col p-0 m-0">
+          <div class="pt-3">
+            <div class="container px-4 text-center">
+              <div class="row">
+                <!-- center -->
+                <div class="col-8 me-2 text-start">
+                  <menu><strong>My Task</strong></menu>
+                  <div class="container d-inline-block">
+                    <div class="row row-cols-2 row-cols-lg-5 g-2">
+                      <!-- 1 -->
+                      <div
+                        class="col m-1 mt-3 priority"
+                        style="width: 10rem; height: 8rem"
+                      >
+                        <div class="p-3 h-100">
+                          <img
+                            src="./images/icons8-priority-50.png"
+                            alt=""
+                            style="width: 3rem"
+                            class="rounded-circle"
+                          />
+                          <p class="m-0 p-0">priority task</p>
+                          <h4>24/47 Task</h4>
+                        </div>
+                      </div>
+                      <!-- 2 -->
+                      <div
+                        class="col m-1 mt-3 upcoming"
+                        style="width: 10rem; height: 8rem"
+                      >
+                        <div class="p-3 h-100">
+                          <img
+                            src="./images/icons8-upcoming-64.png"
+                            alt=""
+                            style="width: 3rem"
+                            class="rounded-circle"
+                          />
+                          <p class="m-0 p-0">Upcoming task</p>
+                          <h4>24/47 Task</h4>
+                        </div>
+                      </div>
+                      <!-- 3 -->
+                      <div
+                        class="col m-1 mt-3 overdue"
+                        style="width: 10rem; height: 8rem"
+                      >
+                        <div class="p-3 h-100">
+                          <img
+                            src="./images/icons8-overdue-50.png"
+                            alt=""
+                            style="width: 3rem"
+                            class="rounded-circle"
+                          />
+                          <p class="m-0 p-0">Overdue task</p>
+                          <h4>24/47 Task</h4>
+                        </div>
+                      </div>
+                      <!-- 4 -->
+                      <div
+                        class="col m-1 mt-3 pending"
+                        style="width: 10rem; height: 8rem"
+                      >
+                        <div class="p-3 h-100">
+                          <img
+                            src="./images/icons8-pending-50.png"
+                            alt=""
+                            style="width: 3rem"
+                            class="rounded-circle"
+                          />
+                          <p class="m-0 p-0">pending task</p>
+                          <h4>24/47 Task</h4>
+                        </div>
+                      </div>
+                      <!--  -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- progress-->
+                <aside class="col">
+                  <div class="text-start">
+                    <menu><strong>Urgently Task</strong></menu>
+                    <!-- project1 -->
+                    <div class="progress mt-3">
+                      <p class="urgentProject d-inline-block">
+                        <strong>Project1</strong>
+                      </p>
+                      <div
+                        class="progress-bar bg-dark ms-3 d-inline-block"
+                        role="progressbar"
+                        style="width: 70%"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <!-- project2 -->
+                    <div class="progress mt-3">
+                      <p class="urgentProject d-inline-block">
+                        <strong>Project2</strong>
+                      </p>
+                      <div
+                        class="progress-bar bg-dark ms-3 d-inline-block"
+                        role="progressbar"
+                        style="width: 60%"
+                        aria-valuenow="60"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <!-- project3 -->
+                    <div class="progress mt-3">
+                      <p class="urgentProject d-inline-block">
+                        <strong>Project3</strong>
+                      </p>
+                      <div
+                        class="progress-bar bg-dark ms-3 d-inline-block"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <!-- project4 -->
+                    <div class="progress mt-3">
+                      <p class="urgentProject d-inline-block">
+                        <strong>Project4</strong>
+                      </p>
+                      <div
+                        class="progress-bar bg-dark ms-3 d-inline-block"
+                        role="progressbar"
+                        style="width: 30%"
+                        aria-valuenow="30"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main body2 -->
+    <div class="container-fluid px-4 ms-0 mt-2 text-center">
+      <div class="row gx-4">
+        <!-- right area-->
+        <div class="col-2">
+          <div class="pt-3">
+            <menu class="text-center"><strong>Upgrade Your Plan</strong> </menu>
+            <p>ipsum dolor sit amet consectetur.</p>
+            <!-- upgrade plan -->
+            <button
+              type="button"
+              class="btn btn-outline-dark btnNotification btnAside"
+            >
+              <i class="fa-solid fa-clipboard-list"></i>
+              See Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- main nav -->
+        <div class="col p-0 m-0">
+          <div class="pt-3">
+            <div class="container px-4 text-center">
+              <div class="row">
+                <!-- reacent vists -->
+                <div class="col-8 newChat me-2" style="height: 16rem">
+                  <menu class="text-start ps-3 pt-3"
+                    ><strong> Reacent visits</strong></menu
+                  >
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img
+                          src="./images/website.jpeg"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-start">Website design</h5>
+                          <p class="card-text text-start">
+                            Lorem, ipsum dolor.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img
+                          src="./images/seo.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-start">SEO Project</h5>
+                          <p class="card-text text-start">
+                            Lorem, ipsum dolor.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img
+                          src="./images/plan.jpeg"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title text-start">Plan 2024</h5>
+                          <p class="card-text text-start">
+                            Lorem, ipsum dolor.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- create new task -->
+                <div class="col newChat text-start p-0">
+                  <div class="">
+                    <menu class="p-2"><strong>New Task</strong></menu>
+                    <ul class="list-group list-group-flush p-0 m-0">
+                      <li class="list-group-item p-0">
+                        <div
+                          class="navbar navbar-light text-start m-0 p-0 d-inline-block"
+                        >
+                          <div class="container">
+                            <a class="navbar-brand" href="#">
+                              <img
+                                src="./images/new1.jpeg"
+                                alt=""
+                                width="35"
+                                height="37"
+                              />
+                            </a>
+                            <p class="d-inline-block text-start p-1">
+                              <strong>Brady Howell</strong><br />
+                              Lorem ipsum dolor sit.
+                            </p>
+                            <span class="text-end ms-5">6:00 PM</span>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="list-group-item p-0">
+                        <div class="navbar navbar-light m-0 p-0 d-inline-block">
+                          <div class="container">
+                            <a class="navbar-brand" href="#">
+                              <img
+                                src="./images/new2.jpeg"
+                                alt=""
+                                width="30"
+                                height="37"
+                              />
+                            </a>
+                            <p class="d-inline-block p-1">
+                              <strong>Dior Thomas</strong><br />
+                              Lorem ipsum dolor sit.
+                            </p>
+                            <span class="text-end ms-5">6:00 PM</span>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="list-group-item p-0">
+                        <div class="navbar navbar-light m-0 p-0 d-inline-block">
+                          <div class="container">
+                            <a class="navbar-brand" href="#">
+                              <img
+                                src="./images/new3.jpeg"
+                                alt=""
+                                width="30"
+                                height="37"
+                              />
+                            </a>
+                            <p class="d-inline-block p-1">
+                              <strong>Jeffrey McGee</strong><br />
+                              Lorem ipsum dolor sit.
+                            </p>
+                            <span class="text-end ms-5">6:00 PM</span>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="list-group-item p-0">
+                        <div class="navbar navbar-light m-0 p-0 d-inline-block">
+                          <div class="container">
+                            <a class="navbar-brand" href="#">
+                              <img
+                                src="./images/new4.jpeg"
+                                alt=""
+                                width="30"
+                                height="37"
+                              />
+                            </a>
+                            <p class="d-inline-block p-1">
+                              <strong>Abner Khan</strong><br />
+                              Lorem ipsum dolor sit.
+                            </p>
+                            <span class="text-end ms-5">6:00 PM</span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main body 3 -->
+    <div class="container-fluid px-4 ms-0 mt-0 text-center">
+      <div class="row gx-4">
+        <!-- aside -->
+        <div class="col-2">
+          <div class="pt-3"></div>
+        </div>
+        <!-- middle -->
+        <div class="col p-0 m-0">
+          <div class="pt-3">
+            <div class="container px-4">
+              <div class="row">
+                <!-- search -->
+                <div class="col-8" style="margin-top: -5.5rem">
+                  <menu class="ps-2 pt-1 text-start"
+                    ><strong>Workspace</strong></menu
+                  >
+
+                  <!-- body -->
+                  <div class="container-fluid">
+                    <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
+                      <div class="col">
+                        <div class="ps-3 pt-3">
+                          <div class="container-fluid p-0">
+                            <a
+                              class="navbar-brand text-start"
+                              style="margin-left: -7rem"
+                              href="#"
+                            >
+                              <img
+                                src="./images/icons8-d-50.png"
+                                alt=""
+                                width="30"
+                                height="30"
+                                class="d-inline-block align-text-top"
+                              />
+                              <span class="space text-secondary">workspace</span
+                              ><br />
+                            </a>
+                            <p
+                              class="text-start p-0 mb-0"
+                              style="margin-top: -1rem; margin-left: 1.4rem"
+                            >
+                              Dstudio space
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="ps-3 pt-3">
+                          <div class="container-fluid">
+                            <a
+                              class="navbar-brand"
+                              href="#"
+                              style="margin-left: -7rem"
+                            >
+                              <img
+                                src="/images/icons8-t-50.png"
+                                alt=""
+                                width="30"
+                                height="30"
+                                class="m-1 align-text-top"
+                              />
+                              <span class="space text-secondary"
+                                >workspace</span
+                              >
+                            </a>
+                            <p
+                              class="text-start p-0 mb-0"
+                              style="margin-top: -1rem; margin-left: 1rem"
+                            >
+                              Team Space
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="ps-3 pt-3">
+                          <div class="container-fluid">
+                            <a
+                              class="navbar-brand"
+                              href="#"
+                              style="margin-left: -7rem"
+                            >
+                              <img
+                                src="./images/icons8-c-50.png"
+                                alt=""
+                                width="30"
+                                height="30"
+                                class="d-inline-block align-text-top text-start"
+                              />
+                              <span class="space text-secondary">workspace</span
+                              ><br />
+                            </a>
+                            <p
+                              class="text-start p-0 mb-0"
+                              style="margin-top: -1rem; margin-left: 1rem"
+                            >
+                              co Space
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- last -->
+                <div class="col"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
